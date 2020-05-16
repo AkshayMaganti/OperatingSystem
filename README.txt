@@ -86,9 +86,5 @@ All the commands available:
         - Usage: loadfs path
             - path is the path to file from which to load the FS
 
-Authors:
 
-    Deepesh - FXD180002
-    Akshay Maganti - AXM180074
-    Harish Kaza - HXK180013
     
