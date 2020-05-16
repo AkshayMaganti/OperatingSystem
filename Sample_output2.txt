@@ -1,0 +1,106 @@
+$ touch test
+$ ./a.out
+Please enter a command to continue
+initfs test 5000 800
+Initializing FS with parameters: path: test dsize: 5000 isize: 800
+
+Please enter a command to continue
+cpin in /v6
+Traversing directory pointing to data block #52
+Got inode# 1 file name: .
+Got inode# 1 file name: ..
+Got inode# 0 file name:
+File name: v6
+Traversing parent. Got inode# 1
+Traversing parent. Got inode# 1
+Traversing parent. Got inode# 0
+Inode's num is 101 size is: 15568
+
+Please enter a command to continue
+cpout /v6 out
+Traversing directory pointing to data block #52
+Got inode# 1 file name: .
+Got inode# 1 file name: ..
+Got inode# 101 file name: v6
+File name: v6
+Found Inode #101
+
+Please enter a command to continue
+mkdir /test
+Traversing directory pointing to data block #52
+Got inode# 1 file name: .
+Got inode# 1 file name: ..
+Got inode# 101 file name: v6
+Got inode# 0 file name:
+File name: test
+Creating directory at inode #100
+Moving to position 52 Traversing parent. Got inode# 1
+Traversing parent. Got inode# 1
+Traversing parent. Got inode# 101
+Traversing parent. Got inode# 0
+
+Please enter a command to continue
+mkdir /test/test
+Traversing directory pointing to data block #52
+Got inode# 1 file name: .
+Got inode# 1 file name: ..
+Got inode# 101 file name: v6
+Got inode# 100 file name: test
+Traversing test with inum 100
+Traversing directory pointing to data block #72
+Got inode# 100 file name: .
+Got inode# 1 file name: ..
+Got inode# 0 file name:
+File name: test
+Creating directory at inode #99
+Moving to position 72 Traversing parent. Got inode# 100
+Traversing parent. Got inode# 1
+Traversing parent. Got inode# 0
+
+Please enter a command to continue
+mkdir /test1/test
+Traversing directory pointing to data block #52
+Got inode# 1 file name: .
+Got inode# 1 file name: ..
+Got inode# 101 file name: v6
+Got inode# 100 file name: test
+Got inode# 0 file name:
+File does not exist
+Parent directory does not exist
+
+Please enter a command to continue
+rm /test/test
+Traversing directory pointing to data block #52
+Got inode# 1 file name: .
+Got inode# 1 file name: ..
+Got inode# 101 file name: v6
+Got inode# 100 file name: test
+Traversing test with inum 100
+Traversing directory pointing to data block #72
+Got inode# 100 file name: .
+Got inode# 1 file name: ..
+Got inode# 99 file name: test
+File name: test
+Moving to position 72 Traversing parent. Got inode# 100
+Traversing parent. Got inode# 1
+Traversing parent. Got inode# 99
+Traversing parent. Got inode# 0
+
+Please enter a command to continue
+rm /test
+Traversing directory pointing to data block #52
+Got inode# 1 file name: .
+Got inode# 1 file name: ..
+Got inode# 101 file name: v6
+Got inode# 100 file name: test
+File name: test
+Moving to position 52 Traversing parent. Got inode# 1
+Traversing parent. Got inode# 1
+Traversing parent. Got inode# 101
+Traversing parent. Got inode# 100
+Traversing parent. Got inode# 0
+
+Please enter a command to continue
+q
+Saving
+Quitting
